@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Nguyen - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header box">
+            <h1>Emily Nguyen</h1>
+            <nav class="header-nav">
+                <a href="about.html" target="_blank">About</a>
+                <a href="skills.html" target="_blank">Skills</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="ttt.html" target="_blank">Tic-Tac-Toe</a>
+                        <a href="hangman.html" target="_blank">Hangman</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+
+        <!-- Main Content Section (Grid) -->
+        <div class="grid">
+            <!-- Introduction Box-->
+            <div class="box introduction">
+                <h2>Hello!</h2>
+                <img src="./circles 2.png" alt="circles icon" class="intro-icon">
+                <br>
+                <p>My name is Emily Nguyen. This is my portfolio website that gives an overview about me!</p>
+                <br>
+                <button class="about-me-button" onclick="location.href='about.html'" target="_blank">More</button>
+            </div>
+
+            <!-- Profile Picture Box -->
+            <div class="box profile">
+                <img src="./noodle.png" alt="Profile Picture">
+            </div>
+
+
+            <!-- One-liner Box -->
+            <div class="box oneliner">
+                <br>
+                <h2>"I'm a CSUF computer science major who loves solving problems, building things, and experimenting with hardware."</h2>
+                <img src="./sparkle.png" alt="flower icon" class="oneliner-icon">
+
+            </div>
+
+            <!-- Projects Box -->
+            <div class="box large projects">
+                <h2>Projects</h2>
+                <div class="carousel">
+                    <div class="carousel-videos">
+                        <video autoplay muted loop playsinline>
+                            <source src="/ttt/tic-tac-toe example.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted loop>
+                            <source src="/hangman/hangman example.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <button class="arrow left" id="prev">&lt;</button>
+                    <button class="arrow right" id="next">&gt;</button>
+                </div>
+                <br>
+                <br>
+                <button class="learn-more-button" onclick="location.href='projects.html'">Learn More</button>
+            </div>
+            
+
+
+            <!-- Experience Box -->
+            <div class="box experience">
+                <h2>Experience</h2>
+                <img src="./sparkle.png" alt="flower icon" class="experience-icon">
+                <ul>
+                    <li><strong>ASML Software Development Intern (2023)</strong></li>
+                    <li><strong>ASML Software Development Intern (2024)</strong></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info Box -->
+            <div class="box small contact">
+                    <span style="font-family: 'Playfair', serif; font-weight: 300; font-size: 20px;">Have any questions?</span>
+                <br>
+                <br>
+                <h2>
+                    Contact
+                    <span style="font-family: 'Cormorant', serif; font-style: italic; font-weight: 300;">me</span>
+                </h2>
+                <div class="contact-arrow" id="openModal"></button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#F5F0E6">
+                        <path d="M13.293 4.707a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L17.586 12H4a1 1 0 110-2h13.586l-4.293-4.293a1 1 0 010-1.414z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div id="contactModal" class="modal">
+                <div class="modal-content">
+                        <form id="contactForm"></form>
+                        <span class="close">&times;</span>
+                        <label for="phone">Phone Number: 442-222-0822</label>
+                        <br>
+
+                        <a href="https://www.linkedin.com/in/emily-nguyen-2786b7322/" target="_blank">LinkedIn</a>
+                        <br>
+                        <br>
+                        <a href="https://github.com/enguyen0401" target="_blank">GitHub</a>
+                        <br>
+                        <br>
+                        <label for="email">Email: enguyen0401@gmail.com</label>
+                        <br>
+                        
+                        <!-- User Question Form -->
+                        <label for="question">Your Question/Comment:</label>
+                        <textarea id="question" name="question" rows="5" placeholder=" Enter your message here..." required></textarea>
+                        <button type="submit">Submit</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

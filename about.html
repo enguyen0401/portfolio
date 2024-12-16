@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header box">
+            <h1>About Me</h1>
+            <nav class="header-nav">
+                <a href="index.html" target="_blank">Home</a>
+                <a href="about.html" target="_blank">About</a>
+                <a href="skills.html">Skills</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="ttt.html" target="_blank">Tic-Tac-Toe</a>
+                        <a href="hangman.html" target="_blank">Hangman</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="grid">
+            <!-- Profile Image Section -->
+            <div class="box profile">
+                <img src="./noodle.png" alt="Profile Picture" class="profile img">
+            </div>
+
+            <!-- Introduction Title Section -->
+            <div class="box introduction-title">
+                <h2>Hi, I am Emily Nguyen, nice to meet you!</h2>
+            </div>
+
+            <!-- Download Resume Section -->
+            <div class="box download">
+                <h2>Resume</h2>
+                <p>Download a PDF version of my resume:</p>
+                <button class="download-resume" onclick="window.open('EmilyNguyen_Resume_2024.pdf', '_blank');">Download Resume</button>
+            </div>
+
+            <!-- Description Section -->
+            <div class="box introduction-description">
+                <p>
+                    I am a computer science major at California State University, Fullerton, with a passion for problem-solving
+                    and building meaningful solutions. I thrive on opportunities to create and innovate, 
+                    whether it's through coding, crafting projects, or diving into hardware. 
+                    My experiences as a software developer intern at ASML have honed my ability to tackle complex systems while collaborating with others on my team.
+                    Outside of tech, I find balance in dancing and reading, which fuels my creativity and adaptability. I’m eager to bring my curiosity, determination, and hands-on skills to any challenge!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Italic:wght@400&family=Playfair:wght@400&display=swap');
+
+/* Basic Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f0ede5;
+    font-family: 'Playfair', serif;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.9); /* Shrink slightly */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
+}
+.header-nav {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+.header-nav a {
+    text-decoration: none; /* Remove underline */
+    font-family: 'Playfair', serif;
+    font-size: 18px;
+    color: #2d2d2d; /* Dark color */
+    transition: color 0.3s ease;
+}
+.header-nav a:hover {
+    color: #000000; /* Slightly lighter color on hover */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 50;
+}
+.dropdown-toggle {
+    text-decoration: none;
+    font-family: 'Playfair', serif;
+    font-size: 18px;
+    color: #2d2d2d;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.dropdown-toggle:hover {
+    color: #555;
+}
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Position below the parent link */
+    left: 0;
+    background-color: #ffffff; /* Light background for dropdown */
+    border-radius: 5px;
+    min-width: 150px; 
+    z-index: 10; 
+}
+.dropdown-menu a {
+    display: block; /* Stack links vertically */
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Playfair', serif;
+    font-size: 16px;
+    color: #2d2d2d;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dropdown-menu a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+    color: #000; /* Darker text on hover */
+}
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown menu */
+    border: 2px solid #888;
+}
+
+
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid system */
+    grid-template-rows: auto; /* Allow rows to adjust dynamically */
+    gap: 20px; /* Add space between boxes */
+}
+
+/* Box placements based on the sketch */
+.profile {
+    grid-column: span 3; /* First column, takes 3/12 columns */
+    grid-row: 1 / 2; /* First row */
+}
+
+.introduction{
+    position: relative;
+    grid-column: span 6; /* Centered, takes 6/12 columns */
+    grid-row: 1 / 2; /* First row */
+    font-family: 'Playfair', serif;
+    font-size: 30px;
+}
+
+.intro-icon{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.about-me-button {
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Align to the right */
+    background-color: #2d2d2d; /* Dark theme matching the minimalist design */
+    color: #f5f0e6; /* Light beige text for contrast */
+    font-family: 'Playfair', serif; /* Font for consistency */
+    font-size: 16px;
+    padding: 10px 20px; /* Add spacing for a balanced look */
+    border: 2px solid #f5f0e6; /* Light beige border */
+    border-radius: 5px; /* Subtle rounding for a modern look */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.about-me-button:hover {
+    background-color: #777676; /* Invert colors on hover */
+    transform: scale(1.05); /* Slight zoom for interactivity */
+}
+
+.learn-more-button {
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Align to the right */
+    background-color: #2d2d2d; /* Dark theme matching the minimalist design */
+    color: #f5f0e6; /* Light beige text for contrast */
+    font-family: 'Playfair', serif; /* Font for consistency */
+    font-size: 16px;
+    padding: 10px 20px; /* Add spacing for a balanced look */
+    border: 2px solid #f5f0e6; /* Light beige border */
+    border-radius: 5px; /* Subtle rounding for a modern look */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.learn-more-button:hover {
+    background-color: #777676;
+    transform: scale(1.05); /* Slight zoom for interactivity */
+}
+
+/* rename */
+.oneliner {
+    grid-column: span 3; /* Last column, takes 3/12 columns */
+    grid-row: 1 / 2; /* First row */
+    font-family: 'Playfair', serif;
+    font-size: 20px;
+    z-index: 1;
+}
+.oneliner-icon{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 45px;
+    height: auto;
+}
+
+.projects {
+    grid-column: span 8; /* Takes 8/12 columns */
+    grid-row: 2 / 3; /* Second row */
+    position: relative; /* Allow absolute positioning for arrows */
+    font-family: 'Playfair', serif;
+    font-size: 20px;
+}
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflowing videos */
+    max-width: 600px; /* Limit width */
+    margin: 20px auto;
+}
+/* Videos Wrapper */
+.carousel-videos {
+    display: flex; /* Align videos horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: 200%; /* Double the width to fit both videos */
+}
+/* Individual Video */
+.carousel-videos video {
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 10px; 
+    margin: 0 10px;
+}
+
+.experience {
+    font-family: 'Playfair', serif;
+    font-size: 20px;
+    grid-column: span 4; /* Takes 3/12 columns */
+    grid-row: 2 / 3; /* Second row */
+}
+
+.experience-icon{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 45px;
+    height: auto;
+}
+
+.contact {
+    grid-column: span 4; /* Bottom-left, takes 4/12 columns */
+    grid-row: 3 / 4; /* Third row */
+}
+
+/* Large box */
+.large {
+    grid-column: span 8;
+    grid-row: span 2;
+    position: relative;
+    font-family: 'Felix Tilting Regular';
+}
+
+/* Small Boxes */
+.small {
+    grid-column: span 4;
+    font-family: 'Playfair', serif;
+    font-size: 30px;
+}
+
+/* Shared Box Styling */
+.box {
+    background-color: #f0ede5;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.profile img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Projects Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2d2d2d;
+    color: #f5f0e6;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: #444;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.learn-more {
+    margin-top: 20px;
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Animation: Triggered by JavaScript */
+.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Contact me */
+.contact-box {
+    width: 350px; /* Adjusted for larger width */
+    height: 200px; /* Adjusted for larger height */
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box p {
+    font-size: 10px;
+    color: #f5f0e6;
+    margin: 0;
+    font-weight: 400;
+    align-self: flex-start;
+}
+
+.contact-box h2 {
+    font-family: 'Playfair', serif;
+    font-size: 28px;
+    margin: 0;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.contact-arrow {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #2d2d2d;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-arrow:hover {
+    background-color: #777676;
+    transform: scale(1.05);
+}
+
+.contact-arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: #f5f0e6;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+}
+.modal-content textarea {
+    width: 100%; /* Full width of the form */
+    border: 2px solid #f5f0e6; /* Light beige border */
+    border-radius: 5px; /* Rounded edges */
+    background-color: #2d2d2d; /* Dark background for minimalism */
+    color: #f5f0e6; /* Light beige text */
+    font-family: 'Playfair', serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    resize: none; /* Disable resizing */
+}
+.modal-content textarea:focus {
+    outline: none;
+    border-color: #ffffff; /* Brighter border on focus */
+}
+.modal-content button {
+    background-color: #f5f0e6; /* Light beige */
+    color: #2d2d2d; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Playfair', serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #ffffff; /* Brighter on hover */
+    transform: scale(1.05); /* Subtle zoom */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10; /* Ensure it overlays all other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #2d2d2d; /* Dark background for minimalist theme */
+    color: #f5f0e6; /* Light beige text */
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 40%; /* Adjust for a smaller, centered modal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    font-family: 'Playfair', serif; /* Match the website's typography */
+    text-align: center; /* Center-align content */
+}
+
+/* Close Button */
+.close {
+    color: #f5f0e6; /* Light beige to match the theme */
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff; /* Bright white on hover for better visibility */
+}
+
+/* Modal Form Labels */
+.modal-content label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Modal Links */
+.modal-content a {
+    color: #f5f0e6; /* Light beige links */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.modal-content a:hover {
+    color: #ffffff; /* Bright white on hover */
+}
+
+/* Modal Submit Button */
+.modal-content button {
+    background-color: #f5f0e6; /* Light beige background */
+    color: #2d2d2d; /* Dark text for contrast */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Playfair', serif;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #ffffff; /* Slightly brighter hover effect */
+    transform: scale(1.05); /* Subtle zoom */
+}
+
+
+/* About Page Style*/
+.introduction-title {
+    grid-column: span 9;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Playfair', serif;
+    padding: 10px 0;
+    height: 100px;
+}
+
+.introduction-description {
+    grid-column: span 9;
+    font-size: 18px;
+    height: 200px;
+    line-height: 1.4;
+    font-family: 'Playfair', serif;
+}
+
+.download {
+    grid-column: span 3;
+    text-align: center;
+    font-family: 'Playfair', serif;
+}
+
+.download-resume {
+    background-color: #2d2d2d;
+    color: #f5f0e6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Playfair', serif;
+}
+
+.download-resume:hover {
+    background-color: #444;
+}
+
+
+/* Skills Page */
+.skills-technical{
+    grid-column: span 30;
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: 'Playfair', serif;
+    grid-row: 1 / 2;
+}
+.skills-nontechnical{
+    grid-column: span 30;
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: 'Playfair', serif;
+    grid-row: 1 / 2;
+}
+
+/* Optional
+.skills-experience{
+    font-family: 'Playfair', serif;
+    grid-column: span 15;
+    grid-row: span 2;
+}
+*/
+
+/* Projects Page */
+.separate-projects video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
