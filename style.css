@@ -144,27 +144,6 @@ body {
     transform: scale(1.05); /* Slight zoom for interactivity */
 }
 
-.learn-more-button {
-    position: absolute;
-    bottom: 20px; /* Position at the bottom */
-    right: 20px; /* Align to the right */
-    background-color: #2d2d2d; /* Dark theme matching the minimalist design */
-    color: #f5f0e6; /* Light beige text for contrast */
-    font-family: 'Playfair', serif; /* Font for consistency */
-    font-size: 16px;
-    padding: 10px 20px; /* Add spacing for a balanced look */
-    border: 2px solid #f5f0e6; /* Light beige border */
-    border-radius: 5px; /* Subtle rounding for a modern look */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transitions */
-}
-
-.learn-more-button:hover {
-    background-color: #777676;
-    transform: scale(1.05); /* Slight zoom for interactivity */
-}
-
-/* rename */
 .oneliner {
     grid-column: span 3; /* Last column, takes 3/12 columns */
     grid-row: 1 / 2; /* First row */
